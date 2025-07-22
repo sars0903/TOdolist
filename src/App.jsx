@@ -16,14 +16,14 @@ function App() {
     copyTask.splice(i, 1);
     setmainstack(copyTask);
   };
-  let renderTask = <h2 className="w-full bg-blue-100 p-4 font-semibold">No Task Available</h2>;
+  let renderTask = <h2 className="w-full bg-blue-100 p-4 font-semibold rounded-3xl px-5">No Task Available</h2>;
 
   if (mainstack.length > 0) {
     renderTask = mainstack.map((t, i) => {
       return (
         <li
           key={i}
-          className=" bg-blue-100 flex items-center justify-between mb-3 p-3 rounded-lg"
+          className=" bg-blue-100 flex items-center justify-between mb-3 p-3 px-5 rounded-3xl"
         >
           <div className="flex justify-between items-center w-2/3">
             <h5 className="text-2xl">{t.title}</h5>
